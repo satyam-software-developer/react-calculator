@@ -2,8 +2,8 @@
 
 React Calculator project built using React for frontend web development.
 
-1. Git repository https://github.com/satyam-software-developer/react-calculator.git
-2. Hosted link: https://satyam-software-developer.github.io/stopwatch-vanilla-javascript/
+1. Git repository: https://github.com/satyam-software-developer/react-calculator.git
+2. Hosted link: https://satyam-software-developer.github.io/react-calculator/
 
 ## Overview
 
@@ -36,7 +36,7 @@ To get started with the calculator application, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/react-calculator.git
+   git clone https://github.com/satyam-software-developer/react-calculator.git
    ```
 2. **Navigate to the Project Directory**:
    cd react-calculator
@@ -66,7 +66,7 @@ This project is licensed under the MIT License.
 
 ## DEMO
 
-- https://satyam-software-developer.github.io/stopwatch-vanilla-javascript/
+- https://satyam-software-developer.github.io/react-calculator/
 
 ## Author
 
