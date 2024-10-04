@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@800&display=swap");
+/* Importing the Martian Mono font from Google Fonts to apply a specific typography to the calculator */
+
+.main {
+  width: 500px;
+  height: 835px;
+  overflow: hidden;
+  background-color: #222;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px black;
+  position: relative;
+  margin-top: 10vw;
+}
+/* Main container for the calculator
+   - `width: 500px`: sets the width of the container to 500px
+   - `height: 835px`: sets the height of the container
+   - `overflow: hidden`: hides any content overflowing outside the container
+   - `background-color: #222`: sets a dark background color
+   - `border-radius: 15px`: rounds the corners
+   - `box-shadow: 5px 5px 20px black`: adds a shadow effect to give depth
+   - `position: relative`: allows child elements to be positioned relative to this container
+   - `margin-top: 10vw`: adds space at the top of the container, using viewport width to ensure responsiveness */
+
+.toggle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+}
+/* Styling for the toggle buttons
+   - `width` and `height`: set the size of each toggle button to 20px
+   - `border-radius: 50%`: makes the buttons circular
+   - `position: absolute`: allows for exact positioning within the parent `.main`
+   - `top: 15px`: positions the buttons 15px from the top of the parent container */
+
+.toggle:nth-child(1) {
+  background-color: red;
+  left: 20px;
+}
+/* The first toggle button (red) is positioned 20px from the left of the container */
+
+.toggle:nth-child(2) {
+  background-color: yellow;
+  left: 60px;
+}
+/* The second toggle button (yellow) is positioned 60px from the left */
+
+.toggle:nth-child(3) {
+  background-color: green;
+  left: 100px;
+}
+/* The third toggle button (green) is positioned 100px from the left */
+
+.title {
+  font-size: 15px;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  margin-top: 0;
+  color: #f200ff;
+  text-transform: uppercase;
+  font-family: "Martian Mono", monospace;
+}
+/* Styling for the calculator title
+   - `font-size: 15px`: sets the size of the font for the title
+   - `width: 100%`: makes the title take up the full width of the container
+   - `text-align: center`: centers the text horizontally
+   - `background-color: transparent`: ensures the background remains invisible
+   - `margin-top: 0`: removes any margin at the top
+   - `color: #f200ff`: sets the title color to a bright pinkish-purple
+   - `text-transform: uppercase`: makes the title text uppercase
+   - `font-family: "Martian Mono", monospace`: applies the Martian Mono font to the title */
+
+.inputCont {
+  width: 100%;
+  margin-top: 40px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+}
+/* Styling for the screen container (holds the input field for the calculator)
+   - `width: 100%`: ensures the input container spans the full width of the parent
+   - `margin-top: 40px`: adds space between the title and the screen
+   - `padding-bottom: 50px`: adds padding below the input field
+   - `display: flex`: uses Flexbox to align the content inside
+   - `align-items: center`: vertically centers the input field within the container
+   - `justify-content: center`: horizontally centers the input field
+   - `background-color: #222`: sets the background color to match the main container */
+
+.inputCont input {
+  width: 430px;
+  font-size: 50px;
+  border: none;
+  color: #b3b4c4;
+  background-color: transparent;
+  text-align: right;
+}
+/* Styling for the input box (calculator screen)
+   - `width: 430px`: sets the input width to 430px
+   - `font-size: 50px`: makes the text in the input large for visibility
+   - `border: none`: removes any default border
+   - `color: #b3b4c4`: sets the text color to a light gray
+   - `background-color: transparent`: ensures the input box has no background
+   - `text-align: right`: aligns the text to the right, typical for calculator displays */
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(125px, auto);
+  gap: 1px;
+}
+/* Styling for the keypad container (holds all buttons)
+   - `display: grid`: arranges the buttons in a grid layout
+   - `grid-template-columns: repeat(4, 1fr)`: creates 4 equal-width columns for the buttons
+   - `grid-auto-rows: minmax(125px, auto)`: sets a minimum row height of 125px for each button
+   - `gap: 1px`: adds a small gap between buttons */
+
+.keypad button {
+  font-size: 50px;
+  font-weight: 600;
+  transition: all 0.8s linear;
+}
+/* General styling for buttons inside the keypad
+   - `font-size: 50px`: makes the text on buttons large and readable
+   - `font-weight: 600`: applies a bold weight to the button text
+   - `transition: all 0.8s linear`: smoothly transitions any changes (like scaling or background color) over 0.8 seconds */
+
+.keypad button:active {
+  transform: scale(0.8);
+}
+/* Styling for when a button is pressed
+   - `transform: scale(0.8)`: makes the button shrink to 80% of its size when clicked */
+
+.keypad button img {
+  width: 50px;
+}
+/* If any button contains an image (like a backspace icon), this ensures the image size is 50px wide */
+
+.zero {
+  grid-column: 1/3;
+}
+/* Special styling for the zero button, which spans across two columns (columns 1 and 2) */
+
+.operator {
+  background-color: hsl(28, 100%, 50%);
+  color: #fff;
+}
+/* Operator button styling (for buttons like +, -, *, ÷)
+   - `background-color: hsl(28, 100%, 50%)`: sets the background color to a bright orange hue using HSL color format
+   - `color: #fff`: sets the text color to white */
+
+@media (max-width: 500px) {
+  .main {
+    width: 100vw;
+    box-shadow: none;
+    border-radius: 0%;
+    height: 790px;
+  }
+  /* On small screens (500px or less):
+     - `width: 100vw`: makes the calculator container span the full width of the viewport
+     - `box-shadow: none`: removes the shadow effect to simplify the design
+     - `border-radius: 0%`: removes the rounded corners
+     - `height: 790px`: slightly reduces the height */
+
+  .toggle {
+    display: none;
+  }
+  /* Hides the toggle buttons on smaller devices for a cleaner UI */
+
+  .title {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  /* On small screens:
+     - `font-size: 12px`: reduces the title font size to fit better
+     - `margin-top: 10px`: adds some space above the title */
+
+  .inputCont {
+    margin-top: 20px;
+  }
+  /* Reduces the margin between the title and the screen for better spacing on small screens */
+
+  .inputCont input {
+    width: 90%;
+    font-size: 40px;
+  }
+  /* On small screens:
+     - `width: 90%`: makes the input box take up 90% of the screen width
+     - `font-size: 40px`: reduces the font size for the input text */
+
+  .keypad button {
+    font-size: 40px;
+  }
+  /* Reduces the button font size to 40px on smaller screens */
+}

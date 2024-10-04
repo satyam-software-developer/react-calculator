@@ -1,0 +1,128 @@
+/* App Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh; /* Ensures full height of the screen */
+  background-color: #b8a9a9; /* Light background for contrast */
+  padding: 20px;
+}
+/* 
+   - The main container of the application, `.App`.
+   - `display: flex`: Utilizes Flexbox to align and position child elements.
+   - `flex-direction: column`: Arranges child elements vertically.
+   - `justify-content: center`: Vertically centers the content.
+   - `align-items: center`: Horizontally centers the content.
+   - `text-align: center`: Centers text content within child elements.
+   - `min-height: 100vh`: Ensures the container takes the full height of the viewport.
+   - `background-color: #b8a9a9`: Sets a light background color for contrast with other elements.
+   - `padding: 20px`: Adds space inside the container on all sides. */
+
+/* App Logo */
+.App-logo {
+  height: 30vmin; /* Adjust logo size */
+  pointer-events: none;
+  margin-bottom: 20px; /* Adds space between the logo and the content */
+}
+/* 
+   - Styles for the logo inside the `.App`.
+   - `height: 30vmin`: Sets the logo's height to 30% of the viewport’s minimum size (either width or height).
+   - `pointer-events: none`: Disables mouse interactions (e.g., clicking) on the logo.
+   - `margin-bottom: 20px`: Adds space between the logo and the next element. */
+
+/* Animation for the Logo Spin */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 10s linear; /* Slowed down animation */
+  }
+}
+/* 
+   - Media query to check if the user prefers reduced motion.
+   - If the user has no preference for reduced motion, the logo will spin.
+   - `animation: App-logo-spin infinite 10s linear`: Applies an infinite animation that lasts for 10 seconds and rotates the logo at a constant speed.
+   - `App-logo-spin`: This is the name of the keyframes animation defined below. */
+
+/* App Header */
+.App-header {
+  background-color: #282c34; /* Dark background for header */
+  width: 100%; /* Ensures it spans the full width of the screen */
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 2vmin); /* Responsive font size based on viewport */
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* 
+   - Styles for the header section inside the `.App`.
+   - `background-color: #282c34`: Sets a dark background color.
+   - `width: 100%`: Ensures the header takes up the full width of the screen.
+   - `min-height: 100vh`: Ensures the header section covers the full viewport height.
+   - `display: flex`: Flexbox layout to position child elements inside the header.
+   - `flex-direction: column`: Arranges elements in a vertical column.
+   - `align-items: center`: Centers the child elements horizontally.
+   - `justify-content: center`: Centers the content vertically within the header.
+   - `font-size: calc(12px + 2vmin)`: A responsive font size, calculated based on both a fixed value (12px) and the viewport's minimum size (vmin).
+   - `color: white`: Sets the text color to white for contrast against the dark background.
+   - `padding: 20px`: Adds padding inside the header for spacing.
+   - `box-sizing: border-box`: Ensures that padding is included within the element's total width and height (important for proper sizing). */
+
+/* Links and Interaction Styles */
+.App-link {
+  color: #61dafb; /* Bright blue link for visibility */
+  text-decoration: none;
+  font-weight: bold;
+}
+/* 
+   - Styles for links (`.App-link`) inside the application.
+   - `color: #61dafb`: Sets the link color to a bright blue for high visibility.
+   - `text-decoration: none`: Removes the default underline for links.
+   - `font-weight: bold`: Makes the link text bold for emphasis. */
+
+.App-link:hover {
+  text-decoration: underline;
+}
+/* 
+   - Styles applied when a link is hovered over.
+   - `text-decoration: underline`: Adds an underline to the link when the user hovers over it. */
+
+/* Logo Spin Keyframes */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* 
+   - Keyframes for the `App-logo-spin` animation.
+   - `from { transform: rotate(0deg); }`: Starts the logo rotation from 0 degrees.
+   - `to { transform: rotate(360deg); }`: Rotates the logo a full 360 degrees.
+   - The animation continuously rotates the logo from 0 to 360 degrees in a smooth motion. */
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(
+      10px + 2vmin
+    ); /* Slightly smaller font on smaller screens */
+    padding: 10px;
+  }
+  /* 
+     - Media query for screens with a maximum width of 768px (typically tablets or smaller devices).
+     - `.App-header`: Adjustments to the header on smaller screens.
+     - `font-size: calc(10px + 2vmin)`: Reduces the font size for smaller screens, still responsive to viewport size.
+     - `padding: 10px`: Reduces padding inside the header for better spacing on small screens. */
+
+  .App-logo {
+    height: 25vmin; /* Smaller logo for mobile screens */
+  }
+  /* 
+     - Reduces the height of the logo to 25% of the viewport's minimum size to make it smaller on mobile devices. */
+}

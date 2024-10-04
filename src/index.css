@@ -1,0 +1,56 @@
+/* Reset default body margin and apply flexbox for centering */
+body {
+  margin: 0;
+  /* Removes the default margin on the body element to ensure no spacing around the edges of the screen */
+
+  height: 100vh;
+  /* Sets the height of the body to take up the full viewport height, ensuring the content stretches to the bottom */
+
+  display: flex;
+  /* Enables flexbox layout on the body, allowing flexible alignment of child elements */
+
+  justify-content: center;
+  /* Centers child elements horizontally within the body using flexbox */
+
+  background-color: rgba(110, 31, 194, 0.881);
+  /* Sets a semi-transparent background color for the body, using an RGBA color value for a purple hue with some transparency */
+
+  align-items: center;
+  /* Centers child elements vertically within the body using flexbox */
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  /* Specifies a list of font families to be used in the app, with system-specific fonts first for better performance and fallback fonts for broader support */
+
+  -webkit-font-smoothing: antialiased;
+  /* Optimizes the appearance of text in WebKit browsers (like Safari), making fonts smoother */
+
+  -moz-osx-font-smoothing: grayscale;
+  /* Optimizes the appearance of text for OS X systems, rendering fonts in grayscale for better readability */
+}
+
+/* Optional styles for code elements */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  /* Specifies monospaced fonts for `code` elements, ensuring that code snippets have a uniform width font for readability */
+}
+
+/* Additional styling for the container to ensure it's centered */
+.App {
+  text-align: center;
+  /* Aligns text to the center of the container for a uniform look */
+
+  padding: 20px;
+  /* Adds padding inside the `.App` container to give some space around its content */
+
+  background-color: #63197a;
+  /* Sets a purple background color for the `.App` container, differentiating it from the rest of the body */
+
+  border-radius: 10px;
+  /* Rounds the corners of the `.App` container, giving it a smoother and more modern look */
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Adds a subtle box shadow to create a sense of depth, making the `.App` container look slightly elevated */
+}
