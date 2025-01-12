@@ -2,7 +2,7 @@
 
 React Calculator project built using React for frontend web development.
 
-1. Git repository: https://github.com/satyam-software-developer/react-calculator.git
+1. Demo: https://drive.google.com/file/d/1ZTV-fbDWPimabq-nP5sTWTOTsjNq4Shd/view?usp=sharing
 2. Hosted link: https://satyam-software-developer.github.io/react-calculator/
 
 ## Overview
@@ -63,10 +63,6 @@ Feel free to fork the repository and submit pull requests if you want to contrib
 ## License
 
 This project is licensed under the MIT License.
-
-## DEMO
-
-- https://satyam-software-developer.github.io/react-calculator/
 
 ## Author
 
