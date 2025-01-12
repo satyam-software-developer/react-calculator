@@ -2,7 +2,7 @@
 
 React Calculator project built using React for frontend web development.
 
-1. Demo: https://drive.google.com/file/d/1ZTV-fbDWPimabq-nP5sTWTOTsjNq4Shd/view?usp=sharing
+1. Demo: https://drive.google.com/file/d/1PbP-7MpXp2f1BBN3vvofRhMxHuSzFQnD/view?usp=sharing
 2. Hosted link: https://satyam-software-developer.github.io/react-calculator/
 
 ## Overview
